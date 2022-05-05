@@ -4,9 +4,9 @@ const sequelize = require('../config/connection');
 
 class ProductTag extends Model {}
 
+// Product Tag table to connect product table & tag table for many to many relationship
 ProductTag.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
