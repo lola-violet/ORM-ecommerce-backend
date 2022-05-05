@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { del } = require('express/lib/application');
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
@@ -28,16 +29,42 @@ router.get('/:id', async (req, res) => {
   };
 });
 
-router.post('/', (req, res) => {
-  // create a new category
+// POST Request - Create a new category
+router.post('/', async (req, res) => {
+  try {
+    const newCategory = await Category.create(req.body);
+    res.status(200).json(newCategory);
+  } catch (err) {
+    res.status(500).json({ msg: 'An error has occurred.', err });
+  }
 });
 
-router.put('/:id', (req, res) => {
-  // update a category by its `id` value
+// PUT Request - Update an existing category by ID
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedCategory = await Category.update(req.body, {
+      where: {
+        id: req.params.id
+      }
+    });
+    res.status(200).json(updatedCategory);
+  } catch (err) {
+    res.status(500).json({ msg: 'An error has occurred.', err });
+  }
 });
 
-router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
+// DELETE Request - Delete an existing category by ID
+router.delete('/:id', async (req, res) => {
+  try {
+    const deletedCategory = await Category.destroy({
+      where: {
+        id: req.params.id
+      }
+    });
+    res.status(200).json(deletedCategory);
+  } catch (err) {
+    res.status(500).json({ msg: 'An error has occurred.', err });
+  }
 });
 
 module.exports = router;
