@@ -32,6 +32,8 @@ Walkthrough Video: [ORM_E-Commerce_Back_End](https://drive.google.com/file/d/15Z
 
 Currently, users will need to enter specific URL pathways in order to use the application. In further development, I plan to incorporate a front-end user interface which allows users to complete CRUD functions with visual representations & forms via their web browser. 
 
+[Current_Deployed_App](https://obscure-reaches-16331.herokuapp.com/)
+
 ---
 
 ## License
