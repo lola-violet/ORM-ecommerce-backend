@@ -10,6 +10,7 @@ A MySQL / Sequelize API database for e-commerce inventory management with full C
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
+* [Images](#images)
 * [License](#license)
 * [Contributing](#contributing)
 * [Questions](#questions)
@@ -32,7 +33,12 @@ Walkthrough Video: [ORM_E-Commerce_Back_End](https://drive.google.com/file/d/15Z
 
 Currently, users will need to enter specific URL pathways in order to use the application. In further development, I plan to incorporate a front-end user interface which allows users to complete CRUD functions with visual representations & forms via their web browser. 
 
-[Current_Deployed_App](https://obscure-reaches-16331.herokuapp.com/)
+---
+
+## Images
+![Screenshot1](./assets/orm1.png)
+![Screenshot2](./assets/orm2.png)
+![Screenshot3](./assets/orm3.png)
 
 ---
 
